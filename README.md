@@ -10,7 +10,6 @@ The City of Chicago and the Chicago Public Health Department (CPHD) have resorte
 
 To learn more about the distribution of WNV in our dataset, see our Tableau Public Story [here](https://public.tableau.com/views/WestNileVirusPredictions/Story1?:embed=y&:display_count=yes)
 
-
 ### Goal
 Using advanced data modeling techniques, we want to predict when and where different species of captured mosquitos will test positive for West Nile Virus based on past data and weather information. Ultimately, we want to find ways we can use these predictions to help the City of Chicago and CPHD allocate resources better. The effectiveness of our predictions will determine what kinds of things our predictions can be used for
 
@@ -34,10 +33,11 @@ TPR/Recall (% of actual WNV-positive cases predicted correctly)|Threshold (proba
 We recommend that City of Chicago and CDPH aim for a True Positive Rate of 95%. That means that only if a specimen has an estimated probability greater than 2% of being WNV-positive, they should send it for testing. This would limit the number of WNV-positive specimens being missed while also saving a great deal of money.
 
 ### Risks and Assumptions
-The results of this study depend greatly on certain assumptions, chief among them being that WNV prevalence will not change dramatically from year to year. If prevalence goes up a lot one year, we would have to adjust our calculations and it's likely that more specimens would need to be tested. This would decrease savings. Another big assumption is that the distribution of WNV across the city of Chicago will not change dramatically; that is, no major changes will occur that increase the likelihood of WNV being present in one area that it hasn't been before. For the four years in the study, there are certain areas where WNV is more common, and this must remain consistent for the results to be valid. The City of Chicago might consider periodic testing of specimens from areas where WNV was previously not seen just in case. Again, this would decrease cost savings but may catch these changes more quickly. Finally, if lab costs for testing WNV specimens change greatly, the savings will change along with it. These risks and assumptions should be kept in mind as decisions get made moving forward.
+The results of this study depend greatly on certain assumptions, chief among them being that WNV prevalence will not change dramatically from year to year. If prevalence goes up a lot one year, we would have to adjust our calculations and it's likely that more specimens would need to be tested. This would decrease savings. Another big assumption is that the distribution of WNV across the city of Chicago will not change dramatically; that is, no major changes will occur that increase the likelihood of WNV being present in one area that it hasn't been before. For the four years in the study, there are certain areas where WNV is more common, and this must remain consistent for the results to be valid. The City of Chicago might consider periodic testing of specimens from areas where WNV was previously not seen just in case. Again, this would decrease cost savings but may catch these changes more quickly. Finally, if lab costs for testing WNV specimens change greatly, the savings will change along with it. These risks and assumptions should be kept in mind as decisions get made moving forward
 
 ### Data Dictionaries
 Weather Data from May 1, 2007 to Oct 31, 2014 from [NOOA](https://www.ncdc.noaa.gov/)
+
 Column Name|Data Type|Description|Notes
 -----------|---------|-----------|-----
 Station|Integer|Which station the data in the row come from|Station 1 or Station 2
@@ -65,6 +65,7 @@ AvgSpeed|Integer|Average wind speed
 Source: [Kaggle documentation](https://kaggle2.blob.core.windows.net/competitions-data/kaggle/4366/noaa_weather_qclcd_documentation.pdf?sv=2015-12-11&sr=b&sig=OL7yE9hJ8SUv%2BmSl3qx1JQrqyMuT%2B6sT8z0TTuNw7G0%3D&se=2016-12-31T23%3A50%3A08Z&sp=r)
 
 Trap Data
+
 Column Name|Data Type|Description|Notes
 -----------|---------|-----------|-----
 Date|DateTime|Date the row's data come from|
